@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import Guesser from '$lib/components/Guesser.svelte';
 	import { endless } from '$lib/stores/endless';
 
@@ -43,7 +44,7 @@
 		</div>
 	{/if}
 	<div class="opacity-20 hover:opacity-100 transition duration-300">
-		<a href="/config" class="btn btn-circle btn-ghost">
+		<a href="{base}/config" class="btn btn-circle btn-ghost">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"

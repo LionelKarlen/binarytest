@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 	import { bitTestConfig } from '$lib/stores/config';
 
 	const config = $bitTestConfig;
@@ -8,7 +9,7 @@
 
 <div class="absolute right-0 top-0 flex flex-col-reverse gap-2 p-2">
 	<div class="opacity-20 hover:opacity-100 transition duration-300">
-		<a href="/" class="btn btn-circle btn-ghost">
+		<a href="{base}/" class="btn btn-circle btn-ghost">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
