@@ -41,7 +41,7 @@
 	</div>
 
 	<button
-		class="btn btn-primary mt-5"
+		class="btn btn-success mt-5"
 		on:click={() => {
 			bitTestConfig.set(tmpConfig);
 			goto('/');

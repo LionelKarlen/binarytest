@@ -36,7 +36,7 @@
 	<BitDisplay {number} />
 
 	<form on:submit|preventDefault={() => checkGuess()}>
-		<div class="join">
+		<div class="join w-full">
 			<input class="input input-bordered join-item w-full" bind:value={guess} />
 			<button class="btn-success btn join-item" on:click={() => checkGuess()}
 				><svg
