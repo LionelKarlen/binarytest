@@ -1,6 +1,4 @@
 <script>
-	import { goto } from '$app/navigation';
-	import { endless } from '$lib/stores/endless';
 	import '../app.postcss';
 </script>
 
