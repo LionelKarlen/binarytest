@@ -1,10 +1,17 @@
 <script lang="ts">
 	import { splitTime, timeUntil } from '$lib/numberHelper';
 	import { endless } from '$lib/stores/endless';
-	import { createEventDispatcher, onDestroy, onMount } from 'svelte';
+	import { createEventDispatcher, onDestroy } from 'svelte';
+	import ls from 'localstorage-slim';
+	import { goto } from '$app/navigation';
 
 	function toggleEndless() {
 		endless.set(true);
+	}
+
+	function forgetSolution() {
+		ls.remove('completed');
+		dispatch('destroy');
 	}
 
 	let timeLeft = timeUntil();
@@ -53,9 +60,28 @@
 				sec
 			</div>
 		</div>
-		<p>Until then, try endless mode:</p>
+		<p>Until then, try endless mode or forget today's solution:</p>
 		<div class="card-actions justify-end">
-			<button class="btn btn-success" on:click={toggleEndless}>Endless</button>
+			<div class="input-group justify-end">
+				<button class="btn btn-ghost" on:click={forgetSolution}>forget</button>
+				<button class="btn btn-success" on:click={toggleEndless}
+					>Endless
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+						/>
+					</svg>
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
