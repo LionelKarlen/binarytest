@@ -11,6 +11,21 @@ export function generateNumber(endless = false): number {
 	return number;
 }
 
+export function timeUntil() {
+	const tmpDate = new Date(Date.now());
+	const date = Date.UTC(tmpDate.getFullYear(), tmpDate.getMonth(), tmpDate.getDate());
+	const endDate = date + 86400000; // Add 1 day
+	return Math.floor((endDate - Date.now()) / 1000);
+}
+
+export function splitTime(seconds: number) {
+	return {
+		hours: Math.floor(seconds / 3600) % 60,
+		minutes: Math.floor(seconds / 60) % 60,
+		seconds: seconds % 60
+	};
+}
+
 export function pow2(exponent: number): number {
 	return 2 << (exponent - 1);
 }

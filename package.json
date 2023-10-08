@@ -37,6 +37,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"localstorage-slim": "^2.6.0",
 		"seedrandom": "^3.0.5"
 	}
 }
