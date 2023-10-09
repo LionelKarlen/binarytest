@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import { bitTestConfig } from '$lib/stores/config';
+	import ls from 'localstorage-slim';
 
 	const config = $bitTestConfig;
 	const tmpConfig = config;
@@ -45,6 +46,7 @@
 		class="btn btn-success mt-5"
 		on:click={() => {
 			bitTestConfig.set(tmpConfig);
+			ls.set('config', tmpConfig);
 			goto(base + '/');
 		}}>Save</button
 	>
