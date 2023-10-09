@@ -7,7 +7,7 @@
 	const config = $bitTestConfig;
 </script>
 
-<div class="flex prose gap-4 flex-row justify-center">
+<div class="flex prose justify-between flex-row md:gap-4">
 	{#each convertBinary(number) as num, index}
 		<Bit {num} index={config.bitCount - index - 1} {config} />
 	{/each}

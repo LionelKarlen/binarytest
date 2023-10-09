@@ -3,7 +3,6 @@
 	import { endless } from '$lib/stores/endless';
 	import { createEventDispatcher, onDestroy } from 'svelte';
 	import ls from 'localstorage-slim';
-	import { goto } from '$app/navigation';
 
 	function toggleEndless() {
 		endless.set(true);
@@ -36,7 +35,7 @@
 	});
 </script>
 
-<div class="card w-1/2 bg-base-200 shadow-xl prose">
+<div class="card md:w-1/2 w-full bg-base-200 shadow-xl prose">
 	<div class="card-body">
 		<h2 class="text-success mt-0">Correct!</h2>
 		<p>You have completed today's binary test. A new one will be available in about:</p>

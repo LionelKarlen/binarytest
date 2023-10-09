@@ -6,7 +6,7 @@
 	let update = 0;
 </script>
 
-<div class="absolute left-0 top-0">
+<div class="absolute left-0 top-0 p-2">
 	<div class="opacity-20 hover:opacity-100 transition duration-300">
 		<button
 			class="btn btn-ghost hover:bg-transparent"
@@ -18,7 +18,7 @@
 		</button>
 	</div>
 </div>
-<div class="absolute right-0 top-0 flex flex-col-reverse gap-2 p-2">
+<div class="absolute right-0 top-0 flex md:flex-col-reverse flex-row gap-2 p-2">
 	{#if $endless}
 		<div class="opacity-20 hover:opacity-100 transition duration-300">
 			<button

@@ -23,7 +23,7 @@
 		</a>
 	</div>
 </div>
-<div class="prose flex flex-col w-3/4 gap-5">
+<div class="prose flex flex-col md:w-3/4 w-full gap-5">
 	<div class="flex-row flex justify-between content-center">
 		<h3 class="m-0">Bit Count</h3>
 		<input

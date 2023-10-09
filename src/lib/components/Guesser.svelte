@@ -8,6 +8,8 @@
 	let number = generateNumber(endless);
 
 	let guess = '';
+	export let update: number;
+	$: update, reset();
 
 	$: endless, (success = ls.get('completed') ? true : undefined);
 
@@ -38,7 +40,7 @@
 {#if success && !endless}
 	<SuccessPage on:destroy={() => reset()} />
 {:else}
-	<div class="flex flex-col gap-5">
+	<div class="flex flex-col gap-5 max-w-full">
 		<BitDisplay {number} />
 
 		<form on:submit|preventDefault={() => checkGuess()}>
